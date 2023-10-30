@@ -19,7 +19,7 @@ const Meals = () => {
   }, [])
 
   return (
-    <div>
+    <div className="flex flex-wrap gap-5 justify-center">
       {meals?.map(meal => (
         <Card key={(meal.idMeal)} meal={meal}/>
       ))}
