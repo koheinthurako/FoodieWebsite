@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Card from "./Card";
 
 const Meals = () => {
 
@@ -19,7 +20,9 @@ const Meals = () => {
 
   return (
     <div>
-      {meals?.map(meal => <h1 key={meal.idMeal}>{meal.strMeal}</h1>)}
+      {meals?.map(meal => (
+        <Card key={(meal.idMeal)} meal={meal}/>
+      ))}
     </div>
   )
 }
