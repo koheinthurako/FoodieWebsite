@@ -11,7 +11,7 @@ const Meals = () => {
   const getMeals = async () => {
     const {data} = await axios.get("https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood");
     setMeals(data.meals);
-    console.log(data.meals);
+    // console.log(data.meals);
   }
 
   useEffect(() => {
