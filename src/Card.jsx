@@ -8,9 +8,11 @@ const Card = ({meal}) => {
     relative h-[400px] hover:shadow-2xl hover:scale-105 transition duration-200">
         <img src={meal.strMealThumb} width={"200px"} className="rounded-lg mt-2" alt="" />
         <h3>{meal.strMeal}</h3>
-        <Link to={`/detail/${meal.idMeal}`}>
-          <button className="text-white bg-blue-500 px-10 py-2 rounded-xl absolute bottom-5 hover:bg-blue-700"><IoEyeSharp className="text-xl"/></button>
-        </Link>        
+          <button className="text-white bg-blue-500 px-10 py-2 rounded-xl absolute bottom-5 hover:bg-blue-700">
+            <Link to={`/detail/${meal.idMeal}`}>
+              <IoEyeSharp className="text-xl"/>
+            </Link>        
+          </button>
     </div>
   )
 }
