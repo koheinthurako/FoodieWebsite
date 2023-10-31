@@ -27,6 +27,7 @@ const Detail = () => {
         <h2 className='text-xl font-semibold mb-2 underline'>Instruction</h2>
         <p>{meal.strInstructions}</p>
       </div>
+      <a></a>
     </div>
   )
 }
