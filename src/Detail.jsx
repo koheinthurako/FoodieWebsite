@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import {BsYoutube} from "react-icons/bs"
 import Loading from './Loader/Loading';
 
@@ -25,9 +25,9 @@ const Detail = () => {
   return (
     <>
       {isLoading ? <Loading/> : (
-        <div className='mt-7 mb-24 flex gap-12 justify-center'>
-          <img src={meal.strMealThumb} alt="" width={"430px"} className='rounded-xl shadow-xl' />
-          <div className="">
+        <div className='my-7 py-3 mb-24 flex flex-wrap gap-9 items-center justify-center bg-slate-50 rounded-xl shadow-xl'>
+          <img src={meal.strMealThumb} alt="" className='w-96 h-max rounded-xl shadow-xl' />
+          <div className="px-12 w-[700px]">
             <div className="my-5">
               <h1 className='font-bold text-2xl mb-3'>{meal.strMeal}</h1>
               <div className='bg-pink-500 text-white w-20 text-sm rounded-xl text-center'>{meal.strCategory}</div>
@@ -36,9 +36,14 @@ const Detail = () => {
               <h2 className='text-xl font-semibold mb-2 underline'>Instruction</h2>
               <p className=''>{meal.strInstructions}</p>
             </div>
-            <div className="flex gap-2 items-center">
-              <a href={meal.strYoutube} target='__blank'><BsYoutube className='text-red-600 text-3xl cursor-pointer'/></a>
-              <p className='text-slate-500'>Watch on YouTube</p>
+            <div className="flex gap-24 mb-5">
+              <div className='flex gap-3 items-center'>
+                <a href={meal.strYoutube} target='__blank'><BsYoutube className='text-red-600 text-3xl cursor-pointer'/></a>
+                <p className='text-slate-500 cursor-pointer'>Watch on YouTube</p>
+              </div>
+              <Link to={'/'}>
+                <button className='bg-pink-500 text-white px-12 py-1 rounded-xl hover:bg-pink-700 transition duration-150'>Home</button>
+              </Link>
             </div>
           </div>
         </div>
