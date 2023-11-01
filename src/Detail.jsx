@@ -12,7 +12,6 @@ const Detail = () => {
 
   const getSingleMeal = async () => {
     const {data} = await axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`);
-    console.log(data.meals[0]);
     setMeal(data?.meals[0]);
     setIsLoading(false);
   }
@@ -25,7 +24,7 @@ const Detail = () => {
   return (
     <>
       {isLoading ? <Loading/> : (
-        <div className='my-7 py-3 mb-24 flex flex-wrap gap-9 items-center justify-center bg-slate-50 rounded-xl shadow-xl'>
+        <div className='my-7 mx-5 py-3 mb-24 flex flex-wrap gap-9 items-center justify-center bg-slate-50 rounded-xl shadow-xl'>
           <img src={meal.strMealThumb} alt="" className='w-96 h-max rounded-xl shadow-xl' />
           <div className="px-12 w-[700px]">
             <div className="my-5">
@@ -34,9 +33,9 @@ const Detail = () => {
             </div>
             <div className='mb-5'>
               <h2 className='text-xl font-semibold mb-2 underline'>Instruction</h2>
-              <p className=''>{meal.strInstructions}</p>
+              <p>{meal.strInstructions}</p>
             </div>
-            <div className="flex gap-24 mb-5">
+            <div className="flex flex-wrap gap-12 mb-5">
               <div className='flex gap-3 items-center'>
                 <a href={meal.strYoutube} target='__blank'><BsYoutube className='text-red-600 text-3xl cursor-pointer'/></a>
                 <p className='text-slate-500 cursor-pointer'>Watch on YouTube</p>
