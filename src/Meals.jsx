@@ -4,7 +4,9 @@ import Card from "./Card";
 
 const Meals = () => {
 
-  const [meals, setMeals] = useState([  ]);
+  const [meals, setMeals] = useState([]);
+  // Meals တွေကို rendering မလုပ်ခင် loading အရင်လုပ်ခြင်း
+  const [isLoading, setIsLoading] = useState(false);
 
   // axios ကိုသုံးပြီး api fetch လုပ်တယ် အပေါ်မှာ state တစ်ခုကြေညာပြီး အောက်က fetch လို့ရလာတဲ့ data တွေကို setMeals နဲ့ meals ထဲကိုထည့်ပြီး
   // getMeals() fun ကိုခေါ်လိုက်တဲ့အခါအလုပ်လုပ်သွားပြီး နောက်ဆုံး conditional map နဲ့ loop ပတ်ပြီး rendering လုပ်သွားတယ်
