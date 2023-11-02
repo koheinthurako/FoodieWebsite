@@ -38,7 +38,7 @@ const Detail = () => {
             <div className="flex flex-wrap gap-12 mb-5">
               <div className='flex gap-3 items-center'>
                 <a href={meal.strYoutube} target='__blank'><BsYoutube className='text-red-600 text-3xl cursor-pointer'/></a>
-                <p className='text-slate-500 cursor-pointer'>Watch on YouTube</p>
+                <a href={meal.strYoutube} target='__blank' className='text-slate-500 cursor-pointer'>Watch on YouTube</a>
               </div>
               <Link to={'/'}>
                 <button className='bg-pink-500 text-white px-12 py-1 rounded-xl hover:bg-pink-700 transition duration-150'>Home</button>
