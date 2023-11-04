@@ -4,7 +4,6 @@ import Meals from "./Meals"
 import Detail from "./Detail"
 import Navbar from "./Navbar";
 import About from "./About";
-import Footer from "./Footer";
 
 const App = () => {
   return (
@@ -15,7 +14,6 @@ const App = () => {
         <Route path='/detail/:id' element={<Detail/>}/>
         <Route path='/about' element={<About/>}/>
       </Routes>
-      <Footer/>
     </div>
   )
 }
