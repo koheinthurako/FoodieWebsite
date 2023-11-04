@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Card from "./Card";
 import Loading from "./Loader/Loading";
+import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 const Meals = () => {
@@ -29,6 +30,7 @@ const Meals = () => {
       {/* condition နဲ့ loading ရှိ/မရှိ အရင်စစ်တယ် */}
       {isLoading ? <Loading/> : (
         <>
+          <Navbar/>
           <div className="flex flex-wrap gap-5 justify-center mb-16">
             {meals?.map(meal => (
               <Card key={(meal.idMeal)} meal={meal}/>

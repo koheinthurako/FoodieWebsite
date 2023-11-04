@@ -8,7 +8,6 @@ import About from "./About";
 const App = () => {
   return (
     <div className="container mx-auto">
-      <Navbar/>
       <Routes>
         <Route path='/' element={<Meals/>}/>
         <Route path='/detail/:id' element={<Detail/>}/>
