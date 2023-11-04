@@ -40,7 +40,7 @@ const Detail = () => {
                 <a href={meal.strYoutube} target='__blank'><BsYoutube className='text-red-600 text-3xl cursor-pointer'/></a>
                 <a href={meal.strYoutube} target='__blank' className='text-slate-500 cursor-pointer'>Watch on YouTube</a>
               </div>
-              <Link to={'/'}>
+              <Link to={-1}>
                 <button className='bg-pink-500 text-white px-12 py-1 rounded-xl hover:bg-pink-700 transition duration-150'>Home</button>
               </Link>
             </div>
