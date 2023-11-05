@@ -1,7 +1,7 @@
 import Loading from "./Loader/Loading";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { IoIosArrowBack } from "react-icons/io"
+import { IoIosArrowBack } from "react-icons/io";
 
 const About = () => {
   const [isLoading, setIsLoading] = useState(true);

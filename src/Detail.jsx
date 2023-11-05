@@ -4,6 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 import {BsYoutube} from "react-icons/bs"
 import Loading from './Loader/Loading';
 import Navbar from './Navbar';
+import { IoIosArrowBack } from "react-icons/io";
 
 // ဒီ process သည် Card UI မှတစ်ဆင့် Detail သို့ data တွေ အသွားအပြန်လုပ်သည့်အတွက် သေချာကြည့်ပါ
 const Detail = () => {
@@ -44,7 +45,12 @@ const Detail = () => {
                   <a href={meal.strYoutube} target='__blank' className='text-slate-500 cursor-pointer'>Watch on YouTube</a>
                 </div>
                 <Link to={-1}>
-                  <button className='bg-pink-500 text-white px-12 py-1 rounded-xl hover:bg-pink-700 transition duration-150'>Back</button>
+                  <button className='bg-pink-500 text-white px-12 py-1 rounded-xl hover:bg-pink-700 transition duration-150'>
+                    <div className="flex items-center gap-1 justify-center">
+                      <IoIosArrowBack/>
+                      <p>Back</p>
+                    </div>
+                  </button>
                 </Link>
               </div>
             </div>
