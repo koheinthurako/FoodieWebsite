@@ -7,7 +7,7 @@ const Card = ({meal}) => {
     <Link to={`/detail/${meal.idMeal}`}>
         <div className="w-64 bg-slate-50 flex justify-top items-center flex-col p-5 rounded-xl gap-5 cursor-pointer
         relative h-[400px] hover:shadow-2xl hover:scale-105 transition duration-200">
-            <img src={meal.strMealThumb} width={"200px"} className="rounded-lg mt-2" alt="" />
+            <img src={meal.strMealThumb} width={"200px"} className="rounded-lg mt-2 hover:scale-105 transition duration-150" alt="" />
             <h3>{meal.strMeal}</h3>
                 <Link to={`/detail/${meal.idMeal}`} className="absolute bottom-5">
                   <button className="text-white bg-blue-500 px-10 py-2 rounded-xl hover:bg-blue-700 transition duration-100">
